@@ -842,6 +842,7 @@ def generate_presentation(
         )
 
     except Exception as exc:
+        print("OPENROUTER ERROR:", repr(exc))
         raise OpenRouterError(
             f"OpenRouter request failed: {exc}"
         ) from exc
