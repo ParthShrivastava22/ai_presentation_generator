@@ -38,7 +38,10 @@ load_dotenv()
 
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-OPENROUTER_MODEL = "minimax/minimax-m3:free"
+OPENROUTER_MODEL = os.getenv(
+    "OPENROUTER_MODEL",
+    "openrouter/free",
+)
 
 
 # ---------------------------------------------------------------------------
