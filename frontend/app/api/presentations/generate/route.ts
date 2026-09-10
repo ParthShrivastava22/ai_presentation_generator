@@ -12,6 +12,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
+    console.log("The backend is:", BACKEND_URI);
 
     const response = await fetch(`${BACKEND_URI}/api/presentations/generate`, {
       method: "POST",

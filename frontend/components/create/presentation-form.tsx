@@ -58,8 +58,6 @@ export function PresentationForm() {
         instructions: instructions || null,
       };
 
-      console.log(process.env.NEXT_BACKEND_URI);
-
       const response = await fetch("/api/presentations/generate", {
         method: "POST",
         headers: {
