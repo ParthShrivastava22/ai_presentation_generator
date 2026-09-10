@@ -58,16 +58,15 @@ export function PresentationForm() {
         instructions: instructions || null,
       };
 
-      const response = await fetch(
-        `${process.env.NEXT_BACKEND_URI}/api/presentations/generate`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(request),
+      console.log(process.env.NEXT_BACKEND_URI);
+
+      const response = await fetch("/api/presentations/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-      );
+        body: JSON.stringify(request),
+      });
 
       const responseText = await response.text();
 
