@@ -59,7 +59,7 @@ export function PresentationForm() {
       };
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URI}/api/presentations/generate`,
+        `${process.env.NEXT_BACKEND_URI}/api/presentations/generate`,
         {
           method: "POST",
           headers: {
